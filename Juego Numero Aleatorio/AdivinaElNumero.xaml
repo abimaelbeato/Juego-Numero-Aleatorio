@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            x:Class="AdivinaElNumero.MainPage"
+             BackgroundColor="black">
+
+    <VerticalStackLayout Spacing="25" Padding="30">
+       
+
+        <!-- Título -->
+        <Label
+            x:Name="lblTitle"
+            Text="¡Adivina el número!"
+            FontSize="32"
+            HorizontalOptions="Center" />
+
+        <!-- Instrucción -->
+        <Label
+            x:Name="lblInstruction"
+            Text="Introduce un número entre 1 y 100"
+            FontSize="20"
+            HorizontalOptions="Center" />
+
+        <!-- Entrada para el número -->
+        <Entry
+            x:Name="entryGuess"
+            Keyboard="Numeric"
+            Placeholder="Tu suposición"
+            FontSize="20"
+            HorizontalOptions="Center" />
+
+        <!-- Botón para enviar la suposición -->
+        <Button
+            x:Name="btnSubmit"
+            Text="Adivinar"
+            FontSize="20"
+            Clicked="OnSubmitClicked" />
+
+        <!-- Mensaje de retroalimentación -->
+        <Label
+            x:Name="lblFeedback"
+            Text=""
+            FontSize="20"
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

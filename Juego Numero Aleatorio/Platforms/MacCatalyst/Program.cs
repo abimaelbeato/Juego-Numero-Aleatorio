@@ -1,7 +1,8 @@
-﻿using ObjCRuntime;
+﻿using AdivinaElNumero;
+using ObjCRuntime;
 using UIKit;
 
-namespace Juego_Numero_Aleatorio
+namespace AdivinaElNumero
 {
     public class Program
     {

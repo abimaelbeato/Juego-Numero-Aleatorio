@@ -1,4 +1,5 @@
-﻿using Microsoft.Maui.Controls;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
 
@@ -15,8 +16,8 @@ namespace AdivinaElNumero
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
-               
+                })
+                .UseMauiCommunityToolkitMediaElement(); // Inicializa el MediaElement
 
             return builder.Build();
         }

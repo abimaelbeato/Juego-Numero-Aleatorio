@@ -1,46 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-            x:Class="AdivinaElNumero.MainPage"
-             BackgroundColor="black">
+<local:BasePage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:AdivinaElNumero"
+    x:Class="AdivinaElNumero.MainPage"
+    BackgroundColor="black">
 
-    <VerticalStackLayout Spacing="25" Padding="30">
-       
+    <AbsoluteLayout>
+        <VerticalStackLayout Spacing="25" Padding="30">
+            <!-- Título -->
+            <Image 
+                Source="Resources/images/adivina.png" 
+                Aspect="AspectFit"
+                WidthRequest="350" 
+                HeightRequest="300"/>
 
-        <!-- Título -->
-        <Label
-            x:Name="lblTitle"
-            Text="¡Adivina el número!"
-            FontSize="32"
-            HorizontalOptions="Center" />
+            <!-- Entrada para el número -->
+            <Entry
+                x:Name="entryGuess"
+                Keyboard="Numeric"
+                Placeholder="Tu suposición"
+                FontSize="20"
+                HorizontalOptions="Center" />
 
-        <!-- Instrucción -->
-        <Label
-            x:Name="lblInstruction"
-            Text="Introduce un número entre 1 y 100"
-            FontSize="20"
-            HorizontalOptions="Center" />
+            <!-- Botón personalizado para "Adivinar" -->
+            <Frame BackgroundColor="Transparent" HasShadow="False" Padding="0" Margin="0,10">
+                <Grid>
+                    <Image Source="Resources/images/boton.png" Aspect="AspectFit" WidthRequest="230" HeightRequest="230" />
+                    <Label Text="Adivinar" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="White" />
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnGuessTapped" />
+                    </Grid.GestureRecognizers>
+                </Grid>
+            </Frame>
 
-        <!-- Entrada para el número -->
-        <Entry
-            x:Name="entryGuess"
-            Keyboard="Numeric"
-            Placeholder="Tu suposición"
-            FontSize="20"
-            HorizontalOptions="Center" />
+            <!-- Mensaje de retroalimentación -->
+            <Label
+                x:Name="lblFeedback"
+                Text=""
+                FontSize="20"
+                HorizontalOptions="Center"
+                TextColor="#ff4ff3"/>
 
-        <!-- Botón para enviar la suposición -->
-        <Button
-            x:Name="btnSubmit"
-            Text="Adivinar"
-            FontSize="20"
-            Clicked="OnSubmitClicked" />
+            <!-- Imagen del adivino en la parte derecha inferior -->
+            <Image Source="Resources/images/adivino.png"
+                   Aspect="AspectFit"
+                   WidthRequest="250"
+                   HeightRequest="250"
+                   AbsoluteLayout.LayoutBounds="1,1"
+                   AbsoluteLayout.LayoutFlags="PositionProportional" />
 
-        <!-- Mensaje de retroalimentación -->
-        <Label
-            x:Name="lblFeedback"
-            Text=""
-            FontSize="20"
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentPage>
+        </VerticalStackLayout>
+    </AbsoluteLayout>
+</local:BasePage>

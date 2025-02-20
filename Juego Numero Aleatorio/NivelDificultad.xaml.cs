@@ -2,7 +2,7 @@ using Microsoft.Maui.Controls;
 
 namespace AdivinaElNumero
 {
-    public partial class NivelDificultad : ContentPage
+    public partial class NivelDificultad : BasePage
     {
         public NivelDificultad()
         {
@@ -31,4 +31,3 @@ namespace AdivinaElNumero
         }
     }
 }
-

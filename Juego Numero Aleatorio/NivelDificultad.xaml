@@ -1,62 +1,46 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!--Resource/images/boton.png-->
+<?xml version="1.0" encoding="utf-8"?>
+<local:BasePage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:AdivinaElNumero"
+    x:Class="AdivinaElNumero.NivelDificultad"
+    BackgroundColor="black">
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AdivinaElNumero.NivelDificultad"
-             BackgroundColor="Black">
+    <VerticalStackLayout Spacing="5" Padding="10" HorizontalOptions="Center" VerticalOptions="Center">
+        <!-- Imagen con texto -->
+        <Image x:Name="imgTitle" 
+               Source="Resources/images/dificultad.png"
+               Aspect="AspectFit" />
 
-    <VerticalStackLayout Spacing="14" Padding="40">
-        
-        <!-- Imagen con el texto de selección -->
-        <Image Source="Resources/images/dificultad.png" 
-        Aspect="AspectFit"
-        HorizontalOptions="Center" />
+        <!-- Botones de nivel de dificultad con imagen y texto -->
+        <Frame BackgroundColor="Transparent" HasShadow="False" Padding="0" Margin="0,2">
+            <Grid>
+                <Image Source="Resources/images/boton.png" Aspect="AspectFit" WidthRequest="260" HeightRequest="260" />
+                <Label Text="Fácil" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" />
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnEasyTapped" />
+                </Grid.GestureRecognizers>
+            </Grid>
+        </Frame>
 
-        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="20" RowSpacing="0">
-            <!-- Nivel Fácil -->
-            <Frame BorderColor="Transparent" CornerRadius="10" Padding="0" Grid.Column="0" Grid.Row="0">
-                <Grid>
-                    <!-- Imagen de fondo (se ajusta al contenedor) -->
-                    <Image Source="Resource/images/boton.png" Aspect="AspectFill"/>
-                    <!-- Contenido encima de la imagen -->
-                    <VerticalStackLayout Padding="20" HorizontalOptions="Center" VerticalOptions="Center">
-                        <Label Text="Fácil" FontSize="20" TextColor="White"/>
-                        <Label Text="1 - 50" FontSize="16" TextColor="White"/>
-                    </VerticalStackLayout>
-                </Grid>
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnEasyTapped"/>
-                </Frame.GestureRecognizers>
-            </Frame>
+        <Frame BackgroundColor="Transparent" HasShadow="False" Padding="0" Margin="0,2">
+            <Grid>
+                <Image Source="Resources/images/boton.png" Aspect="AspectFit" WidthRequest="260" HeightRequest="260" />
+                <Label Text="Medio" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" />
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnMediumTapped" />
+                </Grid.GestureRecognizers>
+            </Grid>
+        </Frame>
 
-            <!-- Nivel Medio -->
-            <Frame BorderColor="Transparent" CornerRadius="10" Padding="0" Grid.Column="1" Grid.Row="0">
-                <Grid>
-                    <Image Source="Resource/images/boton.png" Aspect="AspectFill"/>
-                    <VerticalStackLayout Padding="20" HorizontalOptions="Center" VerticalOptions="Center">
-                        <Label Text="Medio" FontSize="20" TextColor="White"/>
-                        <Label Text="1 - 100" FontSize="16" TextColor="White"/>
-                    </VerticalStackLayout>
-                </Grid>
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnMediumTapped"/>
-                </Frame.GestureRecognizers>
-            </Frame>
-
-            <!-- Nivel Difícil -->
-            <Frame BorderColor="Transparent" CornerRadius="10" Padding="0" Grid.ColumnSpan="2" Grid.Row="1">
-                <Grid>
-                    <Image Source="Resource/images/boton.png" Aspect="AspectFill"/>
-                    <VerticalStackLayout Padding="20" HorizontalOptions="Center" VerticalOptions="Center">
-                        <Label Text="Difícil" FontSize="20" TextColor="White"/>
-                        <Label Text="1 - 500" FontSize="16" TextColor="White"/>
-                    </VerticalStackLayout>
-                </Grid>
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHardTapped"/>
-                </Frame.GestureRecognizers>
-            </Frame>
-        </Grid>
+        <Frame BackgroundColor="Transparent" HasShadow="False" Padding="0" Margin="0,2">
+            <Grid>
+                <Image Source="Resources/images/boton.png" Aspect="AspectFit" WidthRequest="260" HeightRequest="260" />
+                <Label Text="Difícil" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" />
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnHardTapped" />
+                </Grid.GestureRecognizers>
+            </Grid>
+        </Frame>
     </VerticalStackLayout>
-</ContentPage>
+</local:BasePage>

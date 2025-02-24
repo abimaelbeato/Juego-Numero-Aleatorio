@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     x:Class="AdivinaElNumero.BasePage"
-    BackgroundColor="black">
+    BackgroundColor="Black">
 
     <AbsoluteLayout>
         <toolkit:MediaElement x:Name="mediaElement"

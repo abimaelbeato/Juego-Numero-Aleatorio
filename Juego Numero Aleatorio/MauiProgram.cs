@@ -1,7 +1,6 @@
-﻿using CommunityToolkit.Maui;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Controls.Hosting;
+﻿using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
+using CommunityToolkit.Maui;
 
 namespace AdivinaElNumero
 {
@@ -10,14 +9,13 @@ namespace AdivinaElNumero
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkitMediaElement()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                })
-                .UseMauiCommunityToolkitMediaElement(); // Inicializa el MediaElement
+                });
 
             return builder.Build();
         }

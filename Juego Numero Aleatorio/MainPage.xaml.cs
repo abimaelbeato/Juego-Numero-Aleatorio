@@ -1,7 +1,4 @@
 ﻿using Microsoft.Maui.Controls;
-using Microsoft.Maui.Storage;
-using System;
-
 
 namespace AdivinaElNumero
 {
@@ -22,21 +19,21 @@ namespace AdivinaElNumero
             {
                 if (suposicion < numeroSecreto)
                 {
-                    lblFeedback.Text = "Demasiado bajo, intenta nuevamente.";
+                    imgFeedback.Source = "Resources/images/alto.png";
                 }
                 else if (suposicion > numeroSecreto)
                 {
-                    lblFeedback.Text = "Demasiado alto, intenta nuevamente.";
+                    imgFeedback.Source = "Resources/images/bajo.png";
                 }
                 else
                 {
-                    lblFeedback.Text = "¡Correcto! Has adivinado el número.";
+                    imgFeedback.Source = "Resources/images/correctoo.png";
                     ReiniciarJuego();
                 }
             }
             else
             {
-                lblFeedback.Text = "Por favor, ingresa un número válido.";
+                imgFeedback.Source = "Resources/images/invalido.png";
             }
         }
 
@@ -45,7 +42,7 @@ namespace AdivinaElNumero
             var random = new Random();
             numeroSecreto = random.Next(1, 101); // Número aleatorio entre 1 y 100
             entryGuess.Text = string.Empty;
-            lblFeedback.Text = string.Empty;
+            imgFeedback.Source = "Resources/images/empty.png";
         }
     }
 }

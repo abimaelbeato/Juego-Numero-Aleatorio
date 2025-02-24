@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:AdivinaElNumero"
     x:Class="AdivinaElNumero.NivelDificultad"
-    BackgroundColor="black">
+    BackgroundColor="Black">
 
     <VerticalStackLayout Spacing="5" Padding="10" HorizontalOptions="Center" VerticalOptions="Center">
         <!-- Imagen con texto -->
@@ -15,7 +15,7 @@
         <!-- Botones de nivel de dificultad con imagen y texto -->
         <Frame BackgroundColor="Transparent" HasShadow="False" Padding="0" Margin="0,2">
             <Grid>
-                <Image Source="Resources/images/boton.png" Aspect="AspectFit" WidthRequest="260" HeightRequest="260" />
+                <Image Source="Resources/images/button.png" Aspect="AspectFit" WidthRequest="200" HeightRequest="70" />
                 <Label Text="Fácil" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" />
                 <Grid.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnEasyTapped" />
@@ -25,7 +25,7 @@
 
         <Frame BackgroundColor="Transparent" HasShadow="False" Padding="0" Margin="0,2">
             <Grid>
-                <Image Source="Resources/images/boton.png" Aspect="AspectFit" WidthRequest="260" HeightRequest="260" />
+                <Image Source="Resources/images/button.png" Aspect="AspectFit" WidthRequest="200" HeightRequest="70" />
                 <Label Text="Medio" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" />
                 <Grid.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnMediumTapped" />
@@ -35,7 +35,7 @@
 
         <Frame BackgroundColor="Transparent" HasShadow="False" Padding="0" Margin="0,2">
             <Grid>
-                <Image Source="Resources/images/boton.png" Aspect="AspectFit" WidthRequest="260" HeightRequest="260" />
+                <Image Source="Resources/images/button.png" Aspect="AspectFit" WidthRequest="200" HeightRequest="70" />
                 <Label Text="Difícil" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" />
                 <Grid.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnHardTapped" />
